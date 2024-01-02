@@ -1,0 +1,51 @@
+<h1>Array and loop</h1>
+<p id="thisisont"> This is the array and loop practice </p>
+
+<button onclick="
+    changeForCity()
+">press for change city
+
+</button>
+<p id="demo"></p>
+<script>
+    
+    function changeForCity(){}
+        arrayPractice = [
+    "Mandalay","Yangon","Pyi Oo lwin"
+    ]
+    arrayPractice.push("Taugyi");
+    arrayPractice[5] = "Lashio";
+    console.log(arrayPractice);
+    const cars = [
+        "bmw","toyota","changece","lighttruck"
+    ]
+    
+    let  text = "";
+    for (let i=0;i<cars.length;i++) {
+        text += cars[i]+"<br>";
+
+    }
+    document.getElementById("demo").innerHTML =text;
+         /*
+    for (i=0; i<= 10;i++) {
+
+    console.log(i, " Hello world") 
+
+    }
+    document.getElementById("demo").innerHTML="You write this" + " " +
+    window.prompt("this Is Not") + " "+ "city"
+    } */
+
+    const num = [
+      1,2,5
+    ]
+  let total = 0;
+    for (let i=0;i<num.length;i++){
+        const nums=num[i];
+        total+=nums;
+    }
+    console.log(total);
+    
+
+   
+</script>

@@ -1,0 +1,49 @@
+<h1>To do list</h1>
+<input class="todolistjs" placeholder="todo list">
+<input type="date" class="js-date">
+<button onclick="addToDo()">
+    Add
+</button>
+<div class="view"></div>
+<script>
+    const toDoList = [{name: "make dinner", 
+                    duedate:'1-1-2024'}
+        ,
+        {name: "wash clothes",
+        duedate:'2-1-2024'}
+    ];
+function1();
+function function1 (){
+    let toDoListhtml ='';
+ for (i=0;i<toDoList.length;i++){
+    const todoobject = toDoList[i];
+   // const name =todoobject.name;
+    //const duedate=todoobject.duedate;
+    const { name ,duedate } = todoobject;
+    const html =`<p>
+        ${name} ${duedate}
+        <button onclick="
+        toDoList.splice(${i},1);
+        function1();
+        ">Delete</button>
+    
+        </p>`;
+    toDoListhtml +=html;
+ }
+  const nameOfPlan = document.querySelector('.view').innerHTML=toDoListhtml;
+
+
+}
+
+    function addToDo (){
+        const inputElement = document.querySelector('.toDolistjs');
+   const name=inputElement.value;
+   const dateSlector = document.querySelector('.js-date');
+   const duedate = dateSlector.value;
+    toDoList.push({name:name,duedate:duedate})
+
+    inputElement.value='';
+    function1();
+    }
+   
+</script>
